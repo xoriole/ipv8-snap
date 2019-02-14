@@ -1,10 +1,11 @@
 <h1 align="center">
-  <img src="https://avatars1.githubusercontent.com/u/29598503?v=3&s=256" alt="[Project]">
+  <img src="https://www.tribler.org/img/tribler-logo.png" alt="[Project]">
   <br />
-  [Project]
+  Tribler
 </h1>
 
-<p align="center"><b>This is the snap for [Project]</b>, <i>“Single-line elevator pitch for your amazing snap”</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
+<p align="center"><b>This is the snap for Tribler</b>, <i>“Open source decentralized BitTorrent client which allows 
+anonymous peer-to-peer downloads by default”</i>. It works on Ubuntu, Fedora, Debian, and other major Linux
 distributions.</p>
 
 <!-- Uncomment and modify this when you are provided a build status badge
@@ -21,7 +22,7 @@ distributions.</p>
 
 ## Install
 
-    sudo snap install my-snap-name
+    sudo snap install tribler-bittorrent
 
 <!-- Uncomment and modify this when your snap is available on the store
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/my-snap-name)
@@ -39,8 +40,7 @@ are working to land snap install documentation and
 the [snapcraft.yaml](https://github.com/snapcrafters/fork-and-rename-me/blob/master/snap/snapcraft.yaml)
 upstream so [Project] can authoritatively publish future releases.
 
-  - [x] Fork the [Snapcrafters template](https://github.com/snapcrafters/fork-and-rename-me) repository to your own GitHub account.
-    - If you have already forked the Snapcrafter template to your account and want to create another snap, you'll need to use GitHub's [Import repository](https://github.com/new/import) feature because you can only fork a repository once.
+  - [x] Fork the [Snapcrafters template](https://github.com/snapcrafters/fork-and-rename-me) repository to your own GitHub account
   - [ ] Rename the forked Snapcrafters template repository
   - [ ] Update the description of the repository
   - [ ] Update logos and references to `[Project]` and `[my-snap-name]`
