@@ -1,0 +1,40 @@
+name: ipv8
+version: git
+summary: Python IPv8
+description: >
+  p2p networking
+
+grade: devel
+confinement: devmode
+base: core18
+
+parts:
+  ipv8:
+    plugin: python
+    python-version: python2
+    source: https://github.com/Tribler/py-ipv8.git
+    source-type: git
+    source-branch: master
+    source-depth: 1
+    requirements: requirements.txt
+    python-packages:
+      - yappi
+    override-build: |
+      snapcraftctl build 
+      cp -r ./ ${SNAPCRAFT_PART_INSTALL}/usr/share/ipv8
+    stage-packages:
+      - python-libnacl
+      - python-twisted
+apps:
+  key:
+    command: python2 ${SNAP}/usr/share/ipv8/generate_key.py
+  ipv8:
+    command: python2 ${SNAP}/usr/share/ipv8/ipv8_service.py
+  tracker:
+    command: twistd -n tracker
+    environment:
+      PYTHONPATH: ${SNAP}/usr/share/ipv8
+  crawler:
+    command: twistd -n trustchain_crawler
+    environment:
+      PYTHONPATH: ${SNAP}/usr/share/ipv8
